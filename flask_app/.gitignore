@@ -1,6 +1,6 @@
-flask_app/.venv/
-flask_app/flaskr/__pycache__/
-flask_app/flaskr/routes/__pycache__/
+.venv/
+flaskr/__pycache__/
+flaskr/routes/__pycache__/
 
 # *.pyc
 # __pycache__/
