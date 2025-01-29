@@ -1,4 +1,8 @@
 Flask
+numpy
 python-dotenv
 Flask-SQLAlchemy
 mysql-connector-python
+Flask-JWT-Extended
+flask-cors
+python-dotenv

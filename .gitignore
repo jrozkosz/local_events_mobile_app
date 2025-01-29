@@ -1,0 +1,15 @@
+__pycache__/
+flask_app/.venv
+
+~$WPAM.docx
+WPAM.docx
+
+react_app/.expo
+react_app/node_modules
+react_app/assets
+react_app/components
+react_app/constants
+react_app/hooks
+react_app/scripts
+react_app/expo-env.d.ts
+react_app/README.md
