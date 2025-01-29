@@ -11,8 +11,7 @@ const config: Config = {
     // apiBaseUrl: "http://192.168.188.123:5000",
     timeout: 5000,
     environment: "development",
-    // google_api_key: 'AIzaSyBpKzSV9AW7SWk_2qUjbnlZEsc5oICD9DQ',
-    google_api_key: 'AIzaSyBpKzSV9AW7SWk_2qUjbnlZEsc5oICD9DQ'
+    google_api_key: '...'
 };
 
 export default config;

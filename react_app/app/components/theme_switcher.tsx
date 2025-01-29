@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, View } from 'react-native';
-import { useTheme } from './theme_context'; // Importowanie useTheme
+import { useTheme } from './theme_context';
 
 const ThemeSwitcher = () => {
-  const { toggleTheme } = useTheme(); // Funkcja do zmiany motywu
+  const { toggleTheme } = useTheme();
 
   return (
     <View style={{ marginTop: 20 }}>

@@ -3,9 +3,6 @@ from flask import (
 )
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_cors import cross_origin
-import os
-
 
 from flaskr.db import db, User
 
@@ -24,8 +21,6 @@ def register():
     return jsonify({"message": "user registered successfully"}), 201
 
 @bp.route('/login', methods=['POST'])
-# @cross_origin(origin=f'{os.environ["FRONTEND_URL"]}',headers=['Content-Type','Authorization'])
-# @cross_origin()
 def login():
     username = request.json['username']
     password = request.json['password']

@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// Zdefiniowanie dostępnych motywów
 const themes = {
   light: {
     backgroundColor: 'white',
@@ -13,7 +12,7 @@ const themes = {
 };
 
 const ThemeContext = createContext({
-  theme: themes.light, // Domyślny motyw
+  theme: themes.light,
   toggleTheme: () => {},
 });
 
@@ -22,7 +21,7 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState(themes.light); // Domyślny motyw
+  const [theme, setTheme] = useState(themes.light);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === themes.light ? themes.dark : themes.light));

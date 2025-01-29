@@ -11,12 +11,6 @@ from .routes.auth import jwt
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
-    # CORS(app, resources={r'/api/*': {'origins': f'{os.environ["FRONTEND_URL"]}'}}, supports_credentials=True)
-    # CORS(app, resources={r"/api/*": {"origins": "http://localhost:8081"}}, supports_credentials=True) 
-    # CORS(app, supports_credentials=True)
-    # CORS(app, origins=[f'{os.environ["FRONTEND_URL"]}'])
-    # CORS(app)
-    # CORS(app, resources={r'/api/*': {'origins': f'{os.environ["FRONTEND_URL"]}'}})
 
     if test_config is None:
         app.config.from_object(Config)
@@ -89,20 +83,6 @@ def create_app(test_config=None):
                 print(decoded)
             except Exception as e:
                 print(f"\n--- TOKEN DECODE ERROR: {e} ---\n")
-
-
-    # @app.after_request
-    # def handle_options(response):
-    #     # if request.method == "OPTIONS":
-    #     # response = app.make_default_options_response()
-    #     # if response:
-    #     response.headers["Access-Control-Allow-Origin"] = f"{os.environ["FRONTEND_URL"]}"
-    #     response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, PUT, DELETE"
-    #     response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
-    #     if request.method == "OPTIONS":
-    #         response.status_code = 200
-    #     print(response)
-    #     return response
 
     @app.route('/api')
     def test_page():

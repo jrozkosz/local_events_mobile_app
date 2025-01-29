@@ -31,7 +31,6 @@ const SignInScreen: React.FC = () => {
     };
 
     return (
-        // <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
             <View style={styles.container}>
             <Image 
                 resizeMode='contain'
@@ -81,7 +80,6 @@ const SignInScreen: React.FC = () => {
                     Sign up
                 </Link>
             </Text>
-        {/* </ScrollView> */}
         </View>
     );
 };
